@@ -1,4 +1,4 @@
-apiversion:v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jhooq-springboot
@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: jaydan1/jhooq-docker-demo:jhooq-docker-demo
+          image: rahulwagh17/jhooq-docker-demo:jhooq-docker-demo
           ports:
             - containerPort: 8080
           env:
             - name: PORT
               value: "8080"
-apiversion: client.authentication.k8s.io/v1alpha1             
 ---
+apiVersion: v1
 kind: Service
 metadata:
   name: jhooq-springboot
